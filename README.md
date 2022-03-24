@@ -60,15 +60,30 @@ with these lines of code:
 
 ## Results
 
-### MNIST Dataset
-Code can be found in 'scripts/MNIST_lenet_cnn.py.  
+### Cifar 10 Dataset
+Code can be found in 'scripts/cifar10_minivggnet_cnn.py.  
 
-For this dataset we use a LeNet architecture with 20 epochs and a learning
-rate (SGD) of 0.01.
+For this dataset we use a MiniVGGNet architecture with 40 epochs and a learning
+rate (SGD) of 0.01. We also introduce a decay component to the learning rate, a momentum of 0.9, and add Nesterov acceration.
 
 The results summary can be seen below:
 ```buildoutcfg
+              precision    recall  f1-score   support
 
+    airplane       0.85      0.85      0.85      1000
+  automobile       0.92      0.91      0.91      1000
+        bird       0.74      0.73      0.73      1000
+         cat       0.70      0.65      0.67      1000
+        deer       0.78      0.83      0.80      1000
+         dog       0.77      0.72      0.74      1000
+        frog       0.81      0.90      0.85      1000
+       horse       0.89      0.86      0.87      1000
+        ship       0.90      0.91      0.91      1000
+       truck       0.89      0.90      0.89      1000
+
+    accuracy                           0.82     10000
+   macro avg       0.82      0.82      0.82     10000
+weighted avg       0.82      0.82      0.82     10000
 ```
 
 The training loss and accuracy plot for both the training and validation 
