@@ -10,6 +10,7 @@ from tensorflow.keras.datasets import cifar10
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.metrics import classification_report
 from fundamentals.neuralnet import Architectures
+from tensorflow.keras.utils import plot_model
 import matplotlib.pyplot as plt
 import numpy as np
 import argparse
@@ -92,6 +93,10 @@ if __name__ == '__main__':
 	predict = model.predict(testX, batch_size=batch_size)
 	# Print handy report of results
 	print(classification_report(testY.argmax(axis=1), predict.argmax(axis=1), target_names=labelNames))
+
+	# Save model architecture
+	filename_plot = args["output"].spli('.png')[0] + '_architecture.png'
+	plot_model(model, to_file=filename_plot, show_shapes=True)
 
 	# Plot training loss / accuracy
 	plot_loss_accuracy(H, args)
