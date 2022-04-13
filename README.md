@@ -66,6 +66,7 @@ Code can be found in 'scripts/cifar10_minivggnet_cnn.py.
 For this dataset we use a MiniVGGNet architecture with 40 epochs and a learning
 rate (SGD) of 0.01. We also introduce a decay component to the learning rate, a momentum of 0.9, and add Nesterov acceration.
 
+
 The results summary can be seen below:
 ```buildoutcfg
               precision    recall  f1-score   support
