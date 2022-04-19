@@ -101,4 +101,5 @@ if __name__ == '__main__':
 	# Plot training loss / accuracy
 	plot_loss_accuracy(H, args)
 
+
 	print('Done')
